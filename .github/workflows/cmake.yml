@@ -34,4 +34,14 @@ jobs:
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest -C ${{env.BUILD_TYPE}}
+
+    - name: Packaging
+      working-directory: ${{github.workspace}}/build
+      run: cpack
+   
+    - name: Archive packaging
+      uses: actions/upload-artifact@v3
+      with:
+        path: ${{github.workspace}}/build/*.deb
+        retention-days: 1
       
