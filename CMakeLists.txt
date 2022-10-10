@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(hello_world)
+project(hello-world)
 
 add_executable(app main.cpp)
 
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Navarro, Pierre")
-set(CPACK_DEBIAN_PACKAGE_NAME "hello")
 set(CPACK_BINARY_DEB "ON")
 set(CPACK_BINARY_FREEBSD "OFF")
 set(CPACK_BINARY_IFW "OFF")
