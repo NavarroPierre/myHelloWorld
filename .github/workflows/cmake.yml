@@ -42,7 +42,7 @@ jobs:
     - name: Archive packaging
       uses: actions/upload-artifact@v3
       with:
-        name: ${{github.repository}}
+        name: hello-world-packages
         path: |
           ${{github.workspace}}/build/*.deb
           ${{github.workspace}}/build/*.tar.gz
